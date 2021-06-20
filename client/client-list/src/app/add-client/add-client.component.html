@@ -1,1 +1,45 @@
-<p>add-client works!</p>
+<section>
+  <div class="container">
+    <form [formGroup]="clientForm" (ngSubmit)="onSubmit()" autocomplete="off">
+      <div class="form-group">
+        <label for="firstName">First Name</label>
+        <input type="text" formControlName="fname" class="form-control">
+        <div *ngIf="f.fname.dirty && f.fname.invalid" class="invalid-feedback">
+          <p style="color: #eb3b3b;font-size: 14px;line-height: 16px;padding: 0px 0 13px 0;" *ngIf="f.fname.errors.required">First Name is required</p>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="lastName">Last Name</label>
+        <input type="text" formControlName="lname" class="form-control">
+        <div *ngIf="f.lname.dirty && f.lname.invalid" class="invalid-feedback">
+          <p style="color: #eb3b3b;font-size: 14px;line-height: 16px;padding: 0px 0 13px 0;" *ngIf="f.lname.errors.required">Last Name is required</p>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="firstName">Email</label>
+        <input type="email" formControlName="email" class="form-control">
+        <div *ngIf="f.email.dirty && f.email.invalid" class="invalid-feedback">
+          <p style="color: #eb3b3b;font-size: 14px;line-height: 16px;padding: 0px 0 13px 0;" *ngIf="f.email.errors.required">Email is required</p>
+          <p style="color: #eb3b3b;font-size: 14px;line-height: 16px;padding: 0px 0 13px 0;" *ngIf="f.email.errors.email">Email is incorrect</p>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="firstName">Age</label>
+        <input type="number" formControlName="age" class="form-control">
+        <div *ngIf="f.age.dirty && f.age.invalid" class="invalid-feedback">
+          <p style="color: #eb3b3b;font-size: 14px;line-height: 16px;padding: 0px 0 13px 0;" *ngIf="f.age.errors.required">Age is required</p>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="company">Company</label>
+        <input type="text" formControlName="company" class="form-control">
+        <div *ngIf="f.company.dirty && f.company.invalid" class="invalid-feedback">
+          <p style="color: #eb3b3b;font-size: 14px;line-height: 16px;padding: 0px 0 13px 0;" *ngIf="f.company.errors.required">Company Name is required</p>
+        </div>
+      </div>
+
+      <a [routerLink]="['/']" class="btn btn-secondary mr-2">View Clients</a>
+      <button type="submit" [disabled]="clientForm.invalid" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+</section>

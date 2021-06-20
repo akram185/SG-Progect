@@ -8,14 +8,15 @@ import { DataService } from '../data.service';
 })
 export class AddClientComponent implements OnInit {
 
+
   constructor(
     private dataService: DataService,
     private formBuilder: FormBuilder,
   ) { }
-
-  clientForm: FormGroup;
+  clientForm: any;
   // convenience getter for easy access to form fields
   get f() { return this.clientForm.controls; }
+  
 
 
   ngOnInit(): void {
