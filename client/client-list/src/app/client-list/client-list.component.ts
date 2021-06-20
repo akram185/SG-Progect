@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from '../data.service';
 
 @Component({
   selector: 'app-client-list',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ClientListComponent implements OnInit {
 
-  constructor() { }
+  clients: any = [];
+  constructor(private dataService: DataService) { }
 
   ngOnInit(): void {
+    this.dataService.fetch().subscribe( (res: any) => {
+      this.clients = res.data;
+    })
   }
+
 
 }
