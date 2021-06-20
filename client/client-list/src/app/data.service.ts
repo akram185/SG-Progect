@@ -6,7 +6,9 @@ import { Injectable } from '@angular/core';
 })
 export class DataService {
 
-  apiUrl = 'http://192.168.1.238:4444/client'
+  apiUrl = 'http://172.20.10.2:4444/client'
+  //this is the url for my backend that is being run locally
+  //this url varies from whatever machine your backend is running on
 
   constructor(private http: HttpClient) { }
 
