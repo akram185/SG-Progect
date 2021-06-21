@@ -1,5 +1,7 @@
 # Project Overview
 
+In order for Front-End to interact with Back-End. Run the app.py file available in FlaskProject folder and once the server is started copy the URL for your local machine and replace it with the url for my local server in the data.service.ts where it says "apiURL", make sure you keep "/client". data.service.ts file should be available in client-list folder 
+
 SG-Project
 
 ## Project Description
