@@ -10,8 +10,6 @@ This is an app which consists collection of all the clients in Sqlite db. User w
 
 ### MVP
 
-#### MVP 
-
 - A web page to display in a table or list all the clients inserted in the database using the form page
 - Front-End: Web Application using Angular Framework
 - Back-End: Python REST API using Flask framework
